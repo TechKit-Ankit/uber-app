@@ -1,7 +1,8 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore'; // Import any additional Firebase services you need
-import firebase from 'firebase/app';
-import 'firebase/firestore'; // Import any additional Firebase services you need
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCawv3iqm3lDgqahst69Bgv6npgdaT9tZ4",
@@ -12,8 +13,5 @@ const firebaseConfig = {
     appId: "1:533212971584:web:a12d425e81300d128a15a5"
 };
 
-if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
-}
-
-export { firebase };
+// Initialize Firebase
+export const app = initializeApp(firebaseConfig);
